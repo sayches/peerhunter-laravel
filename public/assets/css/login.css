@@ -1,0 +1,137 @@
+body {
+    background:url(../../assets/images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+nav.navbar.navbar-expand-md.navbar-light.bg-white.shadow-sm {
+    display: none;
+}
+.card-header {
+    background: white;
+    border-bottom: 0px;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 40px 0;
+}
+.form-control {
+    background-color: white;
+    outline: none;
+    border-bottom: 2px solid #757575;
+    border-top: 0px;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    padding: 0;
+    width: 100%;
+}
+.form-control:focus{
+	border-color:#757575;
+	box-shadow:none;
+}
+button.btn.btn-primary.login_btn {
+    background-color: #f77e21 !important;
+    border-color: #f77e21 !important;
+    font-family: "Teko",sans-serif;
+    text-transform: uppercase;
+    padding: 8px 44px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 300;
+    width: 40%;
+    border-radius: 0px;
+}
+.card {
+    border-radius: 15px;
+	margin-top: 30px;
+}
+.login-img{
+	padding:40px;
+}
+a.forgot_btn {
+    color: #2f2f2f;
+    padding: 30px 0;
+    text-align: center;
+}
+.account_btn{
+	    background-color: white !important;
+    border-color: white !important;
+    font-family: "Teko",sans-serif;
+    padding: 8px 44px;
+    color: #757575;
+    cursor: pointer;
+    display: inline-block;
+   font-size: 16px;
+    font-weight: 300;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0px;
+    text-decoration: underline !important;
+    line-height: 40px;
+}
+.reset-pswd .card-header {
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.reset-pswd {
+	text-align:center;
+}
+.reset-pswd input.form-control{
+	width:100%;
+}
+.reset-pswd .reset-paswd-btn{
+background-color: #f77e21 !important;
+    border-color: #f77e21 !important;
+    font-family: "Teko",sans-serif;
+    text-transform: uppercase;
+    padding: 8px 44px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 300;
+    box-shadow: none;
+    width: 50%;
+    border-radius: 0px;
+}
+.reset-pswd .card {
+    margin-top: 25%;
+}
+.reset-paswd-confirm .card{
+	margin-top:20%;
+}
+.paswd-updated .card{
+	 margin-top: 25%;
+}
+.paswd-updated .card-header {
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+	color:#13a713;
+}
+.paswd-updated .card-body{
+	text-align:center;
+}
+.reset-paswd-confirm .reset-pswd{
+	background-color: #f77e21 !important;
+    border-color: #f77e21 !important;
+    font-family: "Teko",sans-serif;
+    text-transform: uppercase;
+    padding: 8px 44px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 300;
+    box-shadow: none;
+    border-radius: 0px;
+} 
+.reset-paswd-confirm .card-header {
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}

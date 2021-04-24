@@ -1,0 +1,8 @@
+[18-Feb-2021 07:57:18 America/Boise] PHP Fatal error:  Out of memory (allocated 778846208) (tried to allocate 29210962 bytes) in phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/RemoteFilesystem.php on line 459
+[18-Feb-2021 08:00:59 America/Boise] PHP Fatal error:  Out of memory (allocated 778043392) (tried to allocate 33049336 bytes) in phar:///opt/cpanel/composer/bin/composer/src/Composer/Cache.php on line 79
+[29-Mar-2021 08:23:22 America/Boise] PHP Fatal error:  Out of memory (allocated 796258304) (tried to allocate 6333105 bytes) in phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/RemoteFilesystem.php on line 459
+[29-Mar-2021 08:40:13 America/Boise] PHP Fatal error:  Out of memory (allocated 796258304) (tried to allocate 6333105 bytes) in phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/RemoteFilesystem.php on line 459
+[29-Mar-2021 09:24:19 America/Boise] PHP Fatal error:  Out of memory (allocated 796258304) (tried to allocate 6333105 bytes) in phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/RemoteFilesystem.php on line 459
+[30-Mar-2021 09:43:57 America/Boise] PHP Fatal error:  Out of memory (allocated 796258304) (tried to allocate 6334351 bytes) in phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/RemoteFilesystem.php on line 459
+[30-Mar-2021 10:21:41 America/Boise] PHP Fatal error:  Out of memory (allocated 796258304) (tried to allocate 6334365 bytes) in phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/RemoteFilesystem.php on line 459
+[30-Mar-2021 10:25:17 America/Boise] PHP Fatal error:  Out of memory (allocated 796258304) (tried to allocate 6334365 bytes) in phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/RemoteFilesystem.php on line 459
