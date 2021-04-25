@@ -95,7 +95,7 @@ location ~ \.php$ {
     }
 ```
 29. Run this command: ``sudo chmod 755 -R /var/www/html``
-30. Add ``index.php`` next to the ``index`` in the ``server {...}```
+30. Add ``index.php`` next to the ``index`` in the ``server {...}``
 31. ``sudo chmod 777 -R storage``
 32. ``sudo php artisan key:generate``
 33. Change the the port in the /etc/nginx/sites-available/default file to any port, and change the following: ``root /var/www/html/PeerHunter-Admin/public;``
