@@ -207,7 +207,7 @@
 
 <script src="{{asset('assets/js/jquery.slimscroll.js')}}"></script>
 
-<script src="{{asset('assets/js/ckeditor/adapters/jquery.js')}}"></script>
+<!-- <script src="{{asset('assets/js/ckeditor/adapters/jquery.js')}}"></script> -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
