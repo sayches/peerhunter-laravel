@@ -61,7 +61,7 @@ class UserController extends BaseController
         $data = [];
         //$setting_data = Setting::all();
         //$twilio_api_key = "25HT0PZj3A1HJfh8982If736gRTMFX3e";
-        $twilio_api_key = "A1TDIYLZkZ5am40qwYvW82aAVIXw6odH";
+        $twilio_api_key = "2I4YOaAndxX876p0Qrx3YyGnVEaoLUpC";
         $input = $request->all();
         $validator = Validator::make($input, [
             'phone' => 'required',
