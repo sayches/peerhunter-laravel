@@ -80,5 +80,8 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 24. ``sudo php artisan key:generate``
 25. ``php artisan db:seed``
 26. ``php artisan config:cache``.
+
+## 🖥️ APIs Locations:
+1. Twilio Authentication via SMS API path: ./app/Http/Controllers/UserController.php
 ___
 Copyright © 2021 Sayches Ltd. All rights reserved.
