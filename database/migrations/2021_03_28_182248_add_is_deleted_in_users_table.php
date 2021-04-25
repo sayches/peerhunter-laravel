@@ -13,9 +13,9 @@ class AddIsDeletedInUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->boolean('is_deleted')->after('device_type')->default(0);
-        });
+//        Schema::table('users', function (Blueprint $table) {
+//            $table->boolean('is_deleted')->after('device_type')->default(0);
+//        });
     }
 
     /**
