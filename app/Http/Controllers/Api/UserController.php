@@ -32,7 +32,7 @@ class UserController extends BaseController
 
         //$setting_data = Setting::all();
         //$twilio_api_key = "25HT0PZj3A1HJfh8982If736gRTMFX3e";
-        $twilio_api_key = "AC28e9fb995dd313c0b75db43eec310dbc";
+        $twilio_api_key = "2I4YOaAndxX876p0Qrx3YyGnVEaoLUpC";
         $url = 'https://api.authy.com/protected/json/phones/verification/start?api_key=' . $twilio_api_key;
         $phone = $input['phone'];
         $country_code = $input['country_code'];
