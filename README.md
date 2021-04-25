@@ -79,6 +79,7 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 23. ``php artisan serve --host 0.0.0.0 --port=8000``
 24. ``sudo php artisan key:generate``
 25. ``php artisan db:seed``
-26. ``php artisan config:cache``.
+26. ``sudo apt-get install php7.2-fpm``
+27. ``php artisan config:cache``.
 ___
 Copyright © 2021 Sayches Ltd. All rights reserved.
