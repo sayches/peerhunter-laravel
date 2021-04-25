@@ -13,9 +13,9 @@ class AddDeviceTokenInUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('device_type')->after('u_id')->nullable();
-        });
+ //       Schema::table('users', function (Blueprint $table) {
+ //           $table->string('device_type')->after('u_id')->nullable();
+ //       });
     }
 
     /**
