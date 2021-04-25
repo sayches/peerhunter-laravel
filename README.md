@@ -84,7 +84,7 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 ## 🖥️ Production Setup:
 27. ``sudo apt-get install php7.2-fpm``
 28. Add the following in the /etc/nginx/sites-available/default file:
-``
+```
 location ~ \.php$ {
         try_files $uri =404;
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
@@ -93,7 +93,7 @@ location ~ \.php$ {
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         include fastcgi_params;
     }
-``
+```
 29. Run this command: ``sudo chmod 755 -R /var/www/html``
 30. Add ``index.php`` next to the ``index`` in the ``server {...}```
 31. ``sudo chmod 777 -R storage``
