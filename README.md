@@ -80,25 +80,5 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 24. ``sudo php artisan key:generate``
 25. ``php artisan db:seed``
 26. ``php artisan config:cache``.
-
-## 🖥️ Production Setup:
-27. ``sudo apt-get install php7.2-fpm``
-28. Add the following in the ``/etc/nginx/sites-available/default`` file:
-```
-location ~ \.php$ {
-        try_files $uri =404;
-        fastcgi_split_path_info ^(.+\.php)(/.+)$;
-        fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
-        fastcgi_index index.php;
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-        include fastcgi_params;
-    }
-```
-29. Run this command: ``sudo chmod 755 -R /var/www/html``
-30. Add ``index.php`` next to the ``index`` in the ``server {...}``
-31. ``sudo chmod 777 -R storage``
-32. ``sudo php artisan key:generate``
-33. Change the the port in the ``/etc/nginx/sites-available/default`` file to any port, and change the following: ``root /var/www/html/PeerHunter-Admin/public;``
-34. Comment ``try_files $uri $uri/ =404;`` and add this bellow it: ``try_files $uri $uri/ /index.php$is_args$args;``
 ___
 Copyright © 2021 Sayches Ltd. All rights reserved.
