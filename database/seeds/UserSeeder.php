@@ -13,7 +13,7 @@ class UserSeeder extends Seeder
     {
         $admin = \App\User::create([
             'name'       => 'Super Admin',
-            'email'      => 'admin@peerhunter.com',
+            'email'      => 'info@sayches.com',
             'password'   => Hash::make('password')
         ]);
         $admin->assignRole('admin');
