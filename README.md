@@ -79,7 +79,9 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 23. ``php artisan serve --host 0.0.0.0 --port=8000``
 24. ``sudo php artisan key:generate``
 25. ``php artisan db:seed``
-26. ``php artisan config:cache``.
+26. ``php artisan config:cache``
+27. ``php artisan migrate:fresh`` to erase the database and start fresh
+28. ``sudo php artisan passport:install --force`` to make the API secure. And ``php artisan passport:client --personal`` to create a client for the passport
 
 ## 🔗 APIs Locations:
 1. Twilio Authentication via SMS API path: ``./app/Http/Controllers/UserController.php``
