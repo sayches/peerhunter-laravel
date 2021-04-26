@@ -113,7 +113,7 @@ class UserController extends BaseController
                         'longitude' => $input['longitude'],
                         'latitude' => $input['latitude'],
                         'online'   => date('Y-m-d h:i:s'),
-                        'u_id'  =>$input['u_id'],
+                        'u_id'  => isset($input['u_id']) ?  $input['u_id'] : 0,
                         'device_type'  =>$input['device_type'],
                     ]);
                     $data['already_exists'] = 1;
