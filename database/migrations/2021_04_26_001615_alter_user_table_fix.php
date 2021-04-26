@@ -14,7 +14,7 @@ class AlterUserTableFix extends Migration
 public function up()
 {
 Schema::table('users', function (Blueprint $table) {
-$table->integer('u_id')->nullable();
+$table->integer('u_id')->default(0);
 $table->string('device_type')->default(0);
 });
 }
