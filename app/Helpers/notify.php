@@ -5,8 +5,7 @@ class SendNotification
 {
 
 	private $url = 'https://fcm.googleapis.com/fcm/send';
-	//private  $server_key = 'AAAAz8WcEdI:APA91bEWXTckUKquY9MO17WZJ7pC8oGc4QbI1J9lbtLPW8ZWLCrgT1ZVyYqZrmv1bi-cVoYImeOyLBRoUvpx0gDUhYRb3pxB2QXBemtIahs3XUe0IbSXLvAFWzN0-jfyOq5SEseQk2bk';
-    private  $server_key = 'AAAA2XdqJNM:APA91bGoz87PpFQwzp-lKFN-O1aa9-dI7BBuMbJp4wJsYG0bMsjzxy8RpJx0G8ujvEQH21vQoOeXByGvkEN91GYbSvcmAZscx30aApA--sb852tDbgLV8VhvgMBe7c8Pe8vACaRkUQlw';
+    private  $server_key = 'AAAA1Ue8BA0:APA91bEjDdOflByMQbqUrHz4KqXiaeNg4Dr1f2qqbPHrtQkV94WDHSmHUdlzCXWrwrgzKIr6GauzDbUeA-MEWC7OX0dekUXlXSCb8iYYcgq5Wxu14322p0MqQU6Ri7sBtHWJqhEF89vp';
     
 	public function sendAndroid($data)
     {
