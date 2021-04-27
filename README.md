@@ -69,9 +69,9 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 13. ``sudo apt install mysql-server``
 14. ``sudo mysql_secure_installation``
 15. ``sudo mysql -u root -p``
-16. ``CREATE DATABASE peerhunter;``
-17. ``CREATE USER 'ph'@'localhost' IDENTIFIED WITH mysql_native_password BY 'LR48$r%2ok';``
-18. ``GRANT ALL PRIVILEGES ON peerhunter.* TO 'ph'@'localhost';``
+16. ``CREATE DATABASE db_name_here;``
+17. ``CREATE USER 'db_user_here'@'localhost' IDENTIFIED WITH mysql_native_password BY 'db_password_here';``
+18. ``GRANT ALL PRIVILEGES ON peerhunter.* TO 'db_user_here'@'localhost';``
 19. ``FLUSH PRIVILEGES;``
 20. ``sudo chmod 777 -R storage``
 21. ``sudo apt-get install php7.2-mysql``
