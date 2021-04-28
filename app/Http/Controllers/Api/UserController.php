@@ -222,7 +222,8 @@ class UserController extends BaseController
             //\File::put($siteURL. '/public/uploads/' . $imageName, base64_decode($image));
             // \File::put(public_path('/uploads'). '/' . $imageName, base64_decode($image));
             // $imageUrl = $siteURL.'/public/uploads/' .$imageName;
-            $imageUrl = $image->store('profile_photos', 's3');
+            $base64Image = base64_decode($image);
+            $imageUrl = Storage::disk('s3')->put('' . $imageName, $base64Image, 'public');
             $id = $request->user('api')->id;
             $User = User::find($id);
             if ($User) {
