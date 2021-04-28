@@ -14,6 +14,7 @@ use App\Setting;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use Twilio\Rest\Client;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends BaseController
 {
