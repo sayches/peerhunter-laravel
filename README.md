@@ -2,7 +2,7 @@
 
 | Admin Panel | Mobile Application | Database |
 | --- | --- | --- |
-| Laravel 7.2 (PHP Framework) | Ionic Framwork | MySQL |
+| Laravel 7.2 (PHP Framework) | Ionic Framwork (Capacitor Ionic) & Apache Cordova | MySQL |
 
 ## 🖥️ Laravel Setup:
 1. ``sudo apt-get install php7.2 php7.2-cli php7.2-common``
