@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '159f03b5c163034ee247958d4f07308f8d630826',
+    'reference' => 'add6c411bb355a9532665b4f743991cfbe0ee95b',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -43,6 +43,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '8d8f88b3b3830916be94292c1fbce84433efb1aa',
+    ),
+    'aws/aws-sdk-php' => 
+    array (
+      'pretty_version' => '3.178.11',
+      'version' => '3.178.11.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ae5590158d773402f09ddc79b82e0d9243d3e990',
     ),
     'berkayk/onesignal-laravel' => 
     array (
@@ -527,7 +536,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '159f03b5c163034ee247958d4f07308f8d630826',
+      'reference' => 'add6c411bb355a9532665b4f743991cfbe0ee95b',
     ),
     'laravel/passport' => 
     array (
@@ -600,6 +609,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '9be3b16c877d477357c015cec057548cf9b2a14a',
+    ),
+    'league/flysystem-aws-s3-v3' => 
+    array (
+      'pretty_version' => '1.0.29',
+      'version' => '1.0.29.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '4e25cc0582a36a786c31115e419c6e40498f6972',
     ),
     'league/fractal' => 
     array (
@@ -704,6 +722,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'f9eee5cec93dfb313a38b6b288741e84e53f02d5',
+    ),
+    'mtdowling/jmespath.php' => 
+    array (
+      'pretty_version' => '2.6.0',
+      'version' => '2.6.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '42dae2cbd13154083ca6d70099692fef8ca84bfb',
     ),
     'myclabs/deep-copy' => 
     array (
@@ -1011,8 +1038,8 @@ private static $installed = array (
     array (
       'provided' => 
       array (
-        0 => '1.0',
-        1 => '1.0.0',
+        0 => '1.0.0',
+        1 => '1.0',
       ),
     ),
     'psr/simple-cache' => 
