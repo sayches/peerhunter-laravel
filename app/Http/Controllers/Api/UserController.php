@@ -31,7 +31,6 @@ class UserController extends BaseController
         }
 
         //$setting_data = Setting::all();
-        //$twilio_api_key = "25HT0PZj3A1HJfh8982If736gRTMFX3e";
         $twilio_api_key = "2I4YOaAndxX876p0Qrx3YyGnVEaoLUpC";
         $url = 'https://api.authy.com/protected/json/phones/verification/start?api_key=' . $twilio_api_key;
         $phone = $input['phone'];
@@ -60,7 +59,6 @@ class UserController extends BaseController
         $status = false;
         $data = [];
         //$setting_data = Setting::all();
-        //$twilio_api_key = "25HT0PZj3A1HJfh8982If736gRTMFX3e";
         $twilio_api_key = "2I4YOaAndxX876p0Qrx3YyGnVEaoLUpC";
         $input = $request->all();
         $validator = Validator::make($input, [
