@@ -220,8 +220,9 @@ class UserController extends BaseController
             $imageName = Str::random(12).'.'.'jpeg';
             $siteURL = \Config::get('app.url');
             //\File::put($siteURL. '/public/uploads/' . $imageName, base64_decode($image));
-            \File::put(public_path('/uploads'). '/' . $imageName, base64_decode($image));
-            $imageUrl = $siteURL.'/public/uploads/' .$imageName;
+            // \File::put(public_path('/uploads'). '/' . $imageName, base64_decode($image));
+            // $imageUrl = $siteURL.'/public/uploads/' .$imageName;
+            $imageUrl = $image->store('profile_photos', 's3');
             $id = $request->user('api')->id;
             $User = User::find($id);
             if ($User) {
