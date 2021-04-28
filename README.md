@@ -82,6 +82,7 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 26. ``php artisan config:cache``
 27. ``php artisan migrate:fresh`` to erase the database and start fresh
 28. ``sudo php artisan passport:install --force`` to make the API secure. And ``php artisan passport:client --personal`` to create a client for the passport
+29. To install S3 dependency on the sever, run the following command: ``composer require league/flysystem-aws-s3-v3 "~1.0"``
 
 ## 🔗 APIs Locations:
 1. Twilio Authentication via SMS API path: ``./app/Http/Controllers/UserController.php``
