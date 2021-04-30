@@ -229,7 +229,8 @@ class UserController extends BaseController
             $User = User::find($id);
             if ($User) {
                 $User->update([
-                    'image' => $imageUrl,
+                    // 'image' => $imageUrl,
+                    'image' = Storage::disk('s3')->url($imageName)
                 ]);
             }
             
