@@ -230,7 +230,7 @@ class UserController extends BaseController
             if ($User) {
                 $User->update([
                     // 'image' => $imageUrl,
-                    'image' = Storage::disk('s3')->url($imageName)
+                    'image' => Storage::disk('s3')->url($imageName),
                 ]);
             }
             
