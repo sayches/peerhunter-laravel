@@ -19,16 +19,11 @@ class OfferController extends Controller
     public function createOffer(Request $request)  
     {
         $this->validate($request, [
-            'mode' => 'required', 
             'currency' => 'required',
             'min_value' => 'required',
             'max_value' => 'required',
             'payment_method' => 'required',
-            'description' => 'required',
-            'send_to' => 'required',
-            'is_accepted' => 'required',
-            'is_rejected' => 'required',
-            'is_cancelled' => 'required'
+            'description' => 'required'
         ]);
         
         $id = $request->user('api')->id;
