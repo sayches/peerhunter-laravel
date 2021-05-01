@@ -427,9 +427,9 @@ class UserController extends BaseController
 
             $to_email = $user->email;
             if ($to_email) {
-                Mail::send('mails.delete-user', function ($message) use ($to_email) {
-                    $message->from('support@peerhunter.com', 'PeerHunter');
-                    $message->to($to_email)->subject('Account deleted');
+                Mail::send('mails.delete-user', ['user' => $user], function ($m) use ($user) {
+                    $m->from('support@sayches.com', 'PeerHunter');
+                    $m->to($user->email)->subject('Account deleted');
                 });
             }
 
