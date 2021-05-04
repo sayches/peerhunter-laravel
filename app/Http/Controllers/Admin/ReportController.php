@@ -54,7 +54,7 @@ class ReportController extends Controller
     		//$to_email = "nancy@yopmail.com";
     		if ($to_email) {
     			Mail::send('mails.warning',[] ,function ($message) use ($to_email) {
-	                $message->from('support@peerhunter.com', 'PeerHunter');
+	                $message->from('support@sayches.com', 'PeerHunter');
 	                $message->to($to_email)->subject('Warning Mail');
 	            });
     		}
