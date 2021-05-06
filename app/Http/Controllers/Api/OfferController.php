@@ -13,6 +13,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Http\Controllers\Controller;
 use DB;
 use Helper1;
+use Illuminate\Support\Facades\Mail;
 
 class OfferController extends Controller
 {
@@ -182,6 +183,12 @@ class OfferController extends Controller
                     $sendNotification = $foo->sendAndroid($data); 
                 }
                 $arr = ['message' => 'Offer has been accepted',  'status' => 200];
+
+                Mail::send('emails.offer-accepted', ['user' => $user], function ($m) use ($user) {
+                    $m->from('info@sayches.com', 'PeerHunter');
+        
+                    $m->to($user->email)->subject('Offer Accepted!');
+                });
             }
             else {
                 $arr = ['success' => 'Error', 'status' => 401];
@@ -218,6 +225,12 @@ class OfferController extends Controller
                     $sendNotification = $foo->sendAndroid($data); 
                 }
                 $arr = ['message' => 'Offer has been rejected',  'status' => 200];
+
+                Mail::send('emails.offer-rejetecd', ['user' => $user], function ($m) use ($user) {
+                    $m->from('info@sayches.com', 'PeerHunter');
+        
+                    $m->to($user->email)->subject('Offer Rejected!');
+                });
             }
             else {
                 $arr = ['success' => 'Error', 'status' => 401];
