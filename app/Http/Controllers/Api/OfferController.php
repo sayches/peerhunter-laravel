@@ -277,7 +277,7 @@ class OfferController extends Controller
                 }
                 $arr = ['message' => 'Offer has been withdraw',  'status' => 200];
 
-                Mail::send('emails.offer-withdrawn', ['user' => $user], function ($m) use ($user) {
+                Mail::send('mails.offer-withdrawn', ['user' => $user], function ($m) use ($user) {
                     $m->from('info@sayches.com', 'PeerHunter');
         
                     $m->to($user->email)->subject('Offer Rejected!');
