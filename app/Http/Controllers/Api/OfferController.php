@@ -63,7 +63,7 @@ class OfferController extends Controller
             	$arr = ['message' => 'Added successfully', 'status' => 200];
 
 
-                Mail::send('emails.offer-created', ['user' => $user], function ($m) use ($user) {
+                Mail::send('mails.offer-created', ['user' => $user], function ($m) use ($user) {
                     $m->from('info@sayches.com', 'PeerHunter');
         
                     $m->to($user->email)->subject('Offer Rejected!');
@@ -191,7 +191,7 @@ class OfferController extends Controller
                 }
                 $arr = ['message' => 'Offer has been accepted',  'status' => 200];
 
-                Mail::send('emails.offer-accepted', ['user' => $user], function ($m) use ($user) {
+                Mail::send('mails.offer-accepted', ['user' => $user], function ($m) use ($user) {
                     $m->from('info@sayches.com', 'PeerHunter');
         
                     $m->to($user->email)->subject('Offer Accepted!');
@@ -233,7 +233,7 @@ class OfferController extends Controller
                 }
                 $arr = ['message' => 'Offer has been rejected',  'status' => 200];
 
-                Mail::send('emails.offer-rejetecd', ['user' => $user], function ($m) use ($user) {
+                Mail::send('mails.offer-rejetecd', ['user' => $user], function ($m) use ($user) {
                     $m->from('info@sayches.com', 'PeerHunter');
         
                     $m->to($user->email)->subject('Offer Rejected!');
