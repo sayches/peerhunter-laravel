@@ -68,6 +68,9 @@ class OfferController extends Controller
         
                     $m->to($user->email)->subject('Offer Rejected!');
                 });
+
+                $this->sendEMail($user, "Offer Created", "Offer Created");
+                $this->sendEMail($request->user('api'), "Offer Created", "Offer Created");
             }
             else {
             	$arr = ['success' => 'Error', 'status' => 401];
@@ -190,12 +193,9 @@ class OfferController extends Controller
                     $sendNotification = $foo->sendAndroid($data); 
                 }
                 $arr = ['message' => 'Offer has been accepted',  'status' => 200];
-
-                Mail::send('mails.offer-accepted', ['user' => $user], function ($m) use ($user) {
-                    $m->from('info@sayches.com', 'PeerHunter');
-        
-                    $m->to($user->email)->subject('Offer Accepted!');
-                });
+                
+                $this->sendEMail($user, "Offer Accepted", "Offer Accepted");
+                $this->sendEMail($request->user('api'), "Offer Accepted", "Offer Accepted");
             }
             else {
                 $arr = ['success' => 'Error', 'status' => 401];
@@ -238,6 +238,9 @@ class OfferController extends Controller
         
                     $m->to($user->email)->subject('Offer Rejected!');
                 });
+
+                $this->sendEMail($user, "Offer Accepted", "Offer rejected");
+                $this->sendEMail($request->user('api'), "Offer Accepted", "Offer rejected");
             }
             else {
                 $arr = ['success' => 'Error', 'status' => 401];
@@ -282,6 +285,9 @@ class OfferController extends Controller
         
                     $m->to($user->email)->subject('Offer Rejected!');
                 });
+
+                $this->sendEMail($user, "Offer Withdrawn", "Offer withdrawn");
+                $this->sendEMail($request->user('api'), "Offer Withdrawn", "Offer withdrawn");
             }
             else {
                 $arr = ['success' => 'Error', 'status' => 401];
@@ -292,6 +298,15 @@ class OfferController extends Controller
         }
 
         return response()->json($arr);
+    }
+
+    protected function sendEMail($user, $subject, $message)
+    {
+        Mail::send('mails.offer-notification', ['user' => $user, 'message' => $message], function ($m) use ($user,$subject) {
+            $m->from('info@sayches.com', 'PeerHunter');
+
+            $m->to($user->email)->subject($subject);
+        });
     }
 
 }
