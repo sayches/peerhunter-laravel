@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <p style="letter-spacing: 0.8px; font-size:14px;line-height:20px;color:#858585;margin-bottom: 30px; font-family: Roboto,Helvetica,Arial,sans-serif; color: #5a5656;">
-                        {{$bodyMessage}}
+                        {{$bodyMessage}} #{{$offer->id}}
                     </p>
                     <p style="letter-spacing: 0.8px;font-size:12px;font-style:italic; color: #5a5656;">If you have any
                         questions or concerns regarding this, please feel free to get in touch with us at <b>support@sayches.com</b>

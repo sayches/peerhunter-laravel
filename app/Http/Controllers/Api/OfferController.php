@@ -62,8 +62,8 @@ class OfferController extends Controller
                 }
             	$arr = ['message' => 'Added successfully', 'status' => 200];
 
-                $this->sendEMail($user, "Offer Created", "Offer Created");
-                $this->sendEMail($request->user('api'), "Offer Created", "Offer Created");
+                $this->sendEMail($user,$offer, "Offer Created", "Offer Created");
+                $this->sendEMail($request->user('api'),$offer, "Offer Created", "Offer Created");
             }
             else {
             	$arr = ['success' => 'Error', 'status' => 401];
@@ -187,8 +187,8 @@ class OfferController extends Controller
                 }
                 $arr = ['message' => 'Offer has been accepted',  'status' => 200];
                 
-                $this->sendEMail($user, "Offer Accepted", "Offer Accepted");
-                $this->sendEMail($request->user('api'), "Offer Accepted", "Offer Accepted");
+                $this->sendEMail($user,$offer, "Offer Accepted", "Offer Accepted");
+                $this->sendEMail($request->user('api'),$offer, "Offer Accepted", "Offer Accepted");
             }
             else {
                 $arr = ['success' => 'Error', 'status' => 401];
@@ -226,8 +226,8 @@ class OfferController extends Controller
                 }
                 $arr = ['message' => 'Offer has been rejected',  'status' => 200];
 
-                $this->sendEMail($user, "Offer Accepted", "Offer rejected");
-                $this->sendEMail($request->user('api'), "Offer Accepted", "Offer rejected");
+                $this->sendEMail($user,$offer, "Offer Accepted", "Offer rejected");
+                $this->sendEMail($request->user('api'),$offer, "Offer Accepted", "Offer rejected");
             }
             else {
                 $arr = ['success' => 'Error', 'status' => 401];
@@ -267,8 +267,8 @@ class OfferController extends Controller
                 }
                 $arr = ['message' => 'Offer has been withdraw',  'status' => 200];
 
-                $this->sendEMail($user, "Offer Withdrawn", "Offer withdrawn");
-                $this->sendEMail($request->user('api'), "Offer Withdrawn", "Offer withdrawn");
+                $this->sendEMail($user,$offer, "Offer Withdrawn", "Offer withdrawn");
+                $this->sendEMail($request->user('api'),$offer, "Offer Withdrawn", "Offer withdrawn");
             }
             else {
                 $arr = ['success' => 'Error', 'status' => 401];
@@ -281,13 +281,13 @@ class OfferController extends Controller
         return response()->json($arr);
     }
 
-    protected function sendEMail($user, $subject, $bodyMessage)
+    protected function sendEMail($user, $offer, $subject, $bodyMessage)
     {
-        $data = ['user' => $user, 'bodyMessage' => $bodyMessage];
-        Mail::send('mails.offer-notification', $data , function ($m) use ($user,$subject,$bodyMessage) {
+        $data = ['user' => $user, 'bodyMessage' => $bodyMessage, 'offer' => $offer];
+        Mail::send('mails.offer-notification', $data , function ($m) use ($user,$subject,$bodyMessage, $offer) {
             $m->from('info@sayches.com', 'PeerHunter');
 
-            $m->to($user->email)->subject($subject);
+            $m->to($user->email)->subject($subject ."#".$offer->id);
         });
     }
 
