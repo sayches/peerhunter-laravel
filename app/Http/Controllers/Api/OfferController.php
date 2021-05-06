@@ -62,13 +62,6 @@ class OfferController extends Controller
                 }
             	$arr = ['message' => 'Added successfully', 'status' => 200];
 
-
-                Mail::send('mails.offer-created', ['user' => $user], function ($m) use ($user) {
-                    $m->from('info@sayches.com', 'PeerHunter');
-        
-                    $m->to($user->email)->subject('Offer Rejected!');
-                });
-
                 $this->sendEMail($user, "Offer Created", "Offer Created");
                 $this->sendEMail($request->user('api'), "Offer Created", "Offer Created");
             }
@@ -233,12 +226,6 @@ class OfferController extends Controller
                 }
                 $arr = ['message' => 'Offer has been rejected',  'status' => 200];
 
-                Mail::send('mails.offer-rejetecd', ['user' => $user], function ($m) use ($user) {
-                    $m->from('info@sayches.com', 'PeerHunter');
-        
-                    $m->to($user->email)->subject('Offer Rejected!');
-                });
-
                 $this->sendEMail($user, "Offer Accepted", "Offer rejected");
                 $this->sendEMail($request->user('api'), "Offer Accepted", "Offer rejected");
             }
@@ -279,12 +266,6 @@ class OfferController extends Controller
                     $sendNotification = $foo->sendAndroid($data); 
                 }
                 $arr = ['message' => 'Offer has been withdraw',  'status' => 200];
-
-                Mail::send('mails.offer-withdrawn', ['user' => $user], function ($m) use ($user) {
-                    $m->from('info@sayches.com', 'PeerHunter');
-        
-                    $m->to($user->email)->subject('Offer Rejected!');
-                });
 
                 $this->sendEMail($user, "Offer Withdrawn", "Offer withdrawn");
                 $this->sendEMail($request->user('api'), "Offer Withdrawn", "Offer withdrawn");
