@@ -287,7 +287,7 @@ class OfferController extends Controller
         Mail::send('mails.offer-notification', $data , function ($m) use ($user,$subject,$bodyMessage, $offer) {
             $m->from('info@sayches.com', 'PeerHunter');
 
-            $m->to($user->email)->subject($subject ."#".$offer->id);
+            $m->to($user->email)->subject($subject ." #".$offer->offer_no);
         });
     }
 
