@@ -31,6 +31,12 @@ class UserController extends BaseController
             return response()->json(['message' => $validator->errors(), 'success' => $status], 422);
         }
 
+        if(User::where('phone',$request->phone)
+        ->where('country_code',$request->country_code)
+        ->where('is_deleted',1)->exists()){
+            return response()->json(['message' => 'The user is deleted by the admin, please register with a new number', 'status' => false],422);
+        }
+
         //$setting_data = Setting::all();
         $twilio_api_key = "2I4YOaAndxX876p0Qrx3YyGnVEaoLUpC";
         $url = 'https://api.authy.com/protected/json/phones/verification/start?api_key=' . $twilio_api_key;
