@@ -34,7 +34,7 @@ class UserController extends BaseController
         if(User::where('phone',$request->phone)
         ->where('country_code',$request->country_code)
         ->where('is_deleted',1)->exists()){
-            return response()->json(['message' => 'The user is deleted by the admin, please register with a new number', 'status' => 401]);
+            return response()->json(['message' => 'The user is deleted by the admin, please register with a new number', 'status' => false],422);
         }
 
         //$setting_data = Setting::all();
