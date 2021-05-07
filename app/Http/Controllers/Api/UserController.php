@@ -152,6 +152,9 @@ class UserController extends BaseController
 
     public function updateProfile(Request $request)
     {
+        $this->validate($request, [
+            'name' => 'required'
+        ]);
         $id = $request->user('api')->id;
         if (User::where('id', $id)->exists()) {
             $User = User::find($id);
