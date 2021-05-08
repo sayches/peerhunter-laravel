@@ -14,7 +14,7 @@
 
                     <!--This is dark logo icon-->
 
-                    <img src="{{asset('assets/images/fav.jpg')}}" alt="home" class="dark-logoos"/>
+                    <img src="{{asset('assets/images/fav.jpg')}}" alt="home" width="50px" class="dark-logoos"/>
 
                 </b>
 
@@ -24,11 +24,11 @@
 
                     <!--This is dark logo text-->
 
-                    <img src="{{asset('assets/images/logo.jpg')}}" style="width:40px;" alt="home" class="dark-logo"/>
+                    <img src="{{asset('assets/images/logo.png')}}" style="width:200px;" alt="home" class="dark-logo"/>
 
                     <!--This is light logo text-->
 
-                    <img src="{{asset('assets/images/logo.jpg')}}"alt="home" class="light-logo" style="width:40px;"/>
+                    <img src="{{asset('assets/images/logo.png')}}"alt="home" class="light-logo" style="width:200px;"/>
 
                  </span>
 
