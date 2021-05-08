@@ -13,8 +13,8 @@
                 <b>
 
                     <!--This is dark logo icon-->
-
-                    <img src="{{asset('assets/images/fav.jpg')}}" alt="home" width="50px" class="dark-logoos"/>
+                    PH
+                    <!-- <img src="{{asset('assets/images/fav.jpg')}}" alt="home" width="50px" style="width: 50px;height:50px" class="dark-logoos"/>-->
 
                 </b>
 
