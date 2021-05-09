@@ -137,8 +137,6 @@
 
         	var input = document.querySelector("#tel_phone");
             var iti = window.intlTelInput(input, {
-                initialCountry: "us",
-                localizedCountries: {'us': 'United States'},
                 getSelectedCountryData: true,
 				separateDialCode: true
             });

@@ -18,7 +18,7 @@
 
 				    <div class="login-img">
 
-				      <img src="{{asset('assets/images/logo.jpg')}}" alt="login image" width="100%" />
+				      <img src="{{asset('assets/images/logo.png')}}" alt="login image" width="100%" />
 
 					</div>
 
