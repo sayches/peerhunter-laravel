@@ -22,13 +22,6 @@
 
                 <span class="hidden-xs">
 
-                    <!--This is dark logo text-->
-
-                    <img src="{{asset('assets/images/logo.png')}}" style="width:200px;" alt="home" class="dark-logo"/>
-
-                    <!--This is light logo text-->
-
-                    <img src="{{asset('assets/images/logo.png')}}"alt="home" class="light-logo" style="width:200px;"/>
 
                  </span>
 
