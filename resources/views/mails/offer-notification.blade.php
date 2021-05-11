@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <p style="letter-spacing: 0.8px; font-size:14px;line-height:20px;color:#858585;margin-bottom: 30px; font-family: Roboto,Helvetica,Arial,sans-serif; color: #5a5656;">
-                        {{$bodyMessage}} #{{$offer->id}}
+                        {{$bodyMessage}} #{{$offer->offer_no}}
                     </p>
                     <div class="content email_temp" style="margin: 0px auto; font-family: Roboto,Helvetica,Arial,sans-serif; text-align: center !important;">
 <div class="container">
