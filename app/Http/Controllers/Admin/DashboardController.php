@@ -35,13 +35,17 @@ class DashboardController extends Controller
             $weeklyUsers = User::where('created_at', '>', Carbon::now()->startOfWeek())->where('created_at', '<', Carbon::now()->endOfWeek())->get()->count();
             $monthlyUsers = User::whereMonth('created_at', Carbon::now()->month)->get()->count();
             $yearlyUsers = User::whereYear('created_at', Carbon::now()->year)->get()->count();
+            $deletedUsers =  User::whereYear('created_at', Carbon::now()->year)->where('is_deleted', 1)->get()->count();
+
             $offerCount = Offer::all()->count();
             $weeklyOffers = Offer::where('created_at', '>', Carbon::now()->startOfWeek())->where('created_at', '<', Carbon::now()->endOfWeek())->get()->count();
             $monthlyOffers = Offer::whereMonth('created_at', Carbon::now()->month)->get()->count();
             $yearlyOffers = Offer::whereYear('created_at', Carbon::now()->year)->get()->count();
+            $offerAcceptedCount = Offer::whereYear('created_at', Carbon::now()->year)->where('is_accepted',1)->get()->count();
+            
             //dd($userCount,$weeklyUsers,$monthlyUsers,$yearlyUsers,$offerCount,$weeklyOffers,$monthlyOffers,$yearlyOffers);
 
-            return view('dashboard.admin',compact('userCount','offerCount','weeklyUsers','monthlyUsers','yearlyUsers','weeklyOffers','monthlyOffers','yearlyOffers'));
+            return view('dashboard.admin',compact('userCount','offerCount','weeklyUsers','monthlyUsers','yearlyUsers','weeklyOffers','monthlyOffers','yearlyOffers','deletedUsers','offerAcceptedCount'));
         } else {
             $this->performLogout($request);
 

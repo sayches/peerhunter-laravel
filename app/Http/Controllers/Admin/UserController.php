@@ -142,9 +142,11 @@ class UserController extends Controller
 
     public function update(Request $request)
     {
+
         $user = User::where('id', $request->id)->firstOrFail();
 
-        if ($request->post()) {
+        if ($request->method() == 'POST') {
+         //   dd("DDD");
             $email = Str::random(8);
             $user->update([
                 'email' => $email,
@@ -163,8 +165,10 @@ class UserController extends Controller
                     'email' => $request->email,
                     'country_code' => '+'.$request->country_code,
                     'phone' => $request->phone,
+                    'is_visible' => $request->is_visible
                 ]);
 
+              
                 if ($userUpdate) {
                     $arr = array('message' => 'User updated successfully', 'status' => 200);
                 } else {
