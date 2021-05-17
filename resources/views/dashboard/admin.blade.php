@@ -40,43 +40,27 @@
         <div class="row">
             <div class="col-lg-6 col-sm-6 col-xs-12">
 
-                <div class="white-box analytics-info">
+                <div class="row">
+                    <div class="col-md-8">Total Users</div>
+                    <div class="col-md-4">{{$userCount}}</div>
+                </div>
 
-                    <h3 class="box-title">Total Users</h3>
-
-                    <ul class="list-inline two-part">
-
-                        <li>
-
-                            <div id="sparklinedash"></div>
-
-                        </li>
-
-                        <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success userCountText">{{$userCount}}</span></li>
-
-                    </ul>
-
+                <div class="row">
+                    <div class="col-md-8">Deleted Users</div>
+                    <div class="col-md-4">{{$deletedUsers}}</div>
                 </div>
 
             </div>
             <div class="col-lg-6 col-sm-6 col-xs-12">
 
-                <div class="white-box analytics-info">
+                <div class="row">
+                    <div class="col-md-8">Total Offers</div>
+                    <div class="col-md-4">{{$offerCount}}</div>
+                </div>
 
-                    <h3 class="box-title">Total Offers</h3>
-
-                    <ul class="list-inline two-part">
-
-                        <li>
-
-                            <div id="sparklinedash"></div>
-
-                        </li>
-
-                        <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success offerCountText">{{$offerCount}}</span></li>
-
-                    </ul>
-
+                <div class="row">
+                    <div class="col-md-8">Accepted Offers</div>
+                    <div class="col-md-4">{{$offerAcceptedCount}}</div>
                 </div>
 
             </div>

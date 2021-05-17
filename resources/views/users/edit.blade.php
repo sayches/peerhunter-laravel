@@ -33,7 +33,7 @@
 
                 <div class="white-box">
 
-                    <form id="userFrm" method="post">
+                    <form id="userFrm" method="post" action= {{ route('user.update') }}>
 
                         {{ csrf_field() }}
 
@@ -114,9 +114,9 @@
                                 <div class="form-group">
                                     <label for="name">Visible:</label>
 
-                                    <select class="form-control">
+                                    <select class="form-control" name="is_visible">
                                         <option>Not Visible</option>
-                                        <option value="1" {{$user->is_visible ? 'selected': ''}}>Visible</option>
+                                        <option value="1" {{$user->is_visible==1 ? 'selected': ''}}>Visible</option>
                                     </select>
                                 </div>
                             </div>

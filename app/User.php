@@ -22,9 +22,7 @@ class User extends Authenticatable
         return $this->hasMany('\App\OauthAccessToken');
     }
 
-    protected $fillable = [
-        'name', 'email', 'password','api_token','refresh_token','expires_in','image','phone','country_code','longitude','latitude','is_verified','description','is_visible','iso2','online','offline','device_type','u_id','is_deleted','is_blocked'
-    ];
+    protected $guarded = ['id'];
 
 
     /**
