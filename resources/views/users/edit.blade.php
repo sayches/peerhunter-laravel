@@ -38,7 +38,9 @@
                         {{ csrf_field() }}
 
                         <div class="row">
+                            <div class="col-md-4">
                             <img src="{{ $user->image }}" width="100" />
+                            </div>
                         </div>
 
                         <div class="row">
