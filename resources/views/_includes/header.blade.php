@@ -8,14 +8,18 @@
 
 
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
             <span class="fa fa-bars"></span>
 
-        </button>
+        </button>-->
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 
+            @csrf
+
+        </form>
         <ul class="nav navbar-top-links navbar-left pull-left">
             
             <li>
@@ -30,9 +34,31 @@
             <li>
                 <a href="{{ route('reports.all') }}" class="waves-effect"><i class="fa fa-file fa-fw" aria-hidden="true"></i>Report Management</a>
             </li>
+            <li>
+                <a href="{{ route('profile') }}" class="waves-effect">
+
+                    <i class="fa fa-user fa-fw" aria-hidden="true"></i>
+
+                    Profile
+
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('logout') }}"
+
+                onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+
+                class="waves-effect">
+
+                 <i class="fa fa-sign-out" aria-hidden="true"></i>
+
+                 Logout
+
+             </a>
+            </li>
         </ul>
 
-        <ul class="nav navbar-top-links navbar-right pull-right">
+        <ul class="nav navbar-top-links navbar-right pull-right" style="display: none">
 
             <li>
 
