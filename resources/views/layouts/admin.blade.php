@@ -139,15 +139,7 @@
 
     <!-- ============================================================== -->
 
-    <div class="navbar-default sidebar" role="navigation" id="navbarSupportedContent">
 
-        
-
-            @include('_includes.admin-sidebar')
-
-        
-
-    </div>
 
     <!-- ============================================================== -->
 
@@ -161,7 +153,7 @@
 
     <!-- ============================================================== -->
 
-    <div id="page-wrapper">
+    <div id="page-wrapperx">
 
     @yield('content')
 

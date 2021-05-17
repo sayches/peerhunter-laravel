@@ -2,32 +2,7 @@
 
     <div class="navbar-header">
 
-        <div class="top-left-part">
 
-            <!-- Logo -->
-
-            <a class="logo" href="/">
-
-                <!-- Logo icon image, you can use font-icon also -->
-
-                <b>
-
-                    <!--This is dark logo icon-->
-                    PH
-                    <!-- <img src="{{asset('assets/images/fav.jpg')}}" alt="home" width="50px" style="width: 50px;height:50px" class="dark-logoos"/>-->
-
-                </b>
-
-                <!-- Logo text image you can use text also -->
-
-                <span class="hidden-xs">
-
-
-                 </span>
-
-            </a>
-
-        </div>
 
         <!-- /Logo -->
 
@@ -40,6 +15,22 @@
             <span class="fa fa-bars"></span>
 
         </button>
+
+        <ul class="nav navbar-top-links navbar-left pull-left">
+            
+            <li>
+                <a href="{{ route('dashboard') }}" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
+            </li>
+            <li>
+                <a href="{{ route('users.all') }}" class="waves-effect"><i class="fa fa-users fa-fw" aria-hidden="true"></i>Users</a>
+            </li>
+            <li>
+                <a href="{{ route('offers.all') }}" class="waves-effect"><i class="fa fa-bars fa-fw" aria-hidden="true"></i>Offers</a>
+            </li>
+            <li>
+                <a href="{{ route('reports.all') }}" class="waves-effect"><i class="fa fa-file fa-fw" aria-hidden="true"></i>Report Management</a>
+            </li>
+        </ul>
 
         <ul class="nav navbar-top-links navbar-right pull-right">
 
